@@ -90,8 +90,15 @@ nav {
 .show-signup {
   height: 20rem;
 }
+.brand-mobile {
+  width: 20px;
+}
+.brand-mobile img {
+  width: 100%;
+}
+
 .hamburger .fa-bars {
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 .hamburger {
   transition: var(--transition);
