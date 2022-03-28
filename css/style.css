@@ -20,6 +20,7 @@
   --h1fontMobile: 46.74px;
   --h1fontDesktop: 61px;
   --bg-blue: #15172c;
+  --bg-yellow: #ff9c00;
 }
 .relative {
   position: relative;
@@ -76,7 +77,7 @@ nav {
   border: none;
   margin-bottom: 20px;
   box-shadow: 1px 1px 4px #e1000093;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 .arrow-down {
   padding-left: 10px;
@@ -114,6 +115,7 @@ nav {
 .nav-item {
   margin-bottom: 45.69px;
 }
+/* hero style */
 .red-design {
   position: absolute;
   height: 50px;
@@ -149,6 +151,7 @@ header {
   align-items: center;
   height: 63px;
   width: 209.47500610351562px;
+  padding: 0;
 }
 /* .btn img {
   box-shadow: 1px 1px 4px #e1000093;
@@ -161,6 +164,7 @@ header {
 .hero-poster {
   display: flex;
   justify-content: center;
+  margin-top: 30px;
 }
 .poster-container {
   width: 370px;
@@ -186,14 +190,76 @@ header {
 .custom-shape-divider-bottom-1648453308 .shape-fill {
   fill: var(--bg-blue);
 }
-
-/** For mobile devices **/
-@media (max-width: 767px) {
-  .custom-shape-divider-bottom-1648453308 svg {
-    width: calc(139% + 1.3px);
-    height: 141px;
-  }
+/* hero style Ends here */
+.height-100 {
+  height: 100vh;
 }
+.bg-blue {
+  background-color: var(--bg-blue);
+}
+/* exchange style */
+.exchange {
+  position: absolute;
+  bottom: 0;
+  z-index: 20;
+}
+.coin-form-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+.m-auto {
+  margin: 0 auto;
+}
+.crypto-text {
+  text-align: center;
+  color: var(--clr-white);
+  margin-top: 8;
+}
+.progress-bar-container {
+  margin-top: 54.94px;
+  margin-bottom: 23.64px;
+}
+.progress-bar-outer {
+  background-color: var(--red);
+  height: 7px;
+  display: flex;
+  border-radius: 3px;
+}
+.progress-bar-inner {
+  width: 10%;
+  background: var(--bg-yellow);
+  border-radius: 3px;
+}
+.coin-exchange-container select,
+.input-container input {
+  height: 86px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+.fourStepsHeader {
+  color: var(--red);
+  margin-top: 69px;
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 44px;
+}
+.fourStepsHeader ~ h2 {
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 51px;
+  /* width: var(50% - 1000px); */
+}
+/* exchange style ends here */
+/* four steps */
+
+.steps {
+  align-items: center !important;
+  padding: 5px;
+}
+/* frames */
 @keyframes message {
   from {
     transform: translateX(0%);
@@ -202,12 +268,18 @@ header {
     transform: translateX(-80%);
   }
 }
+/* frames ends here */
+
+/** For mobile devices **/
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .hero-poster {
+    margin-top: 60px;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -276,7 +348,7 @@ header {
     text-align: left;
   }
   .hero-description {
-    display: none;
+    display: block;
   }
   .hero-btn {
     display: flex;
@@ -303,12 +375,44 @@ header {
     width: calc(139% + 1.3px);
     height: 150px;
   }
+  .crypto-text,
+  .progress-bar-container,
+  .coin-exchange-container {
+    margin: 0 auto;
+  }
+  .progress-bar-container {
+    margin-top: 67.82px;
+    margin-bottom: 93.82px;
+  }
+  .coin-exchange-container select {
+    margin-bottom: 45px;
+  }
+  .coin-form-btn {
+    margin-top: 30px;
+    justify-content: start;
+  }
+  .hero-poster {
+    margin-top: 150px;
+  }
+  .btn {
+    border: none;
+    background-color: none;
+  }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .hero-poster {
+    margin-top: 100px;
+  }
+  .headerOne {
+    width: calc(100% - 150px);
+  }
 }
 
 /*  XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
+  .hero-poster {
+    margin-top: 0px;
+  }
 }
