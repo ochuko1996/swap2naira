@@ -3,9 +3,7 @@
   margin: 0;
   padding: 0;
 }
-body {
-  overflow: hidden;
-}
+
 /* root */
 :root {
   --light-pink: #fff1f1;
@@ -19,6 +17,12 @@ body {
   /* transition */
   --transition: all 0.3s linear;
   --font-clr: #000;
+  --h1fontMobile: 46.74px;
+  --h1fontDesktop: 61px;
+  --bg-blue: #15172c;
+}
+.relative {
+  position: relative;
 }
 .message-container {
   background-color: var(--light-pink);
@@ -30,7 +34,7 @@ body {
 .message-alert {
   width: 200vw;
   justify-content: space-between;
-  /* overflow: auto; */
+  overflow: auto;
 }
 .scroll {
   animation: message 10s linear infinite;
@@ -49,6 +53,11 @@ nav {
 .bordered {
   border: 1px solid black;
 }
+.nav-main-container {
+  position: fixed;
+  width: 100vw;
+  z-index: 1;
+}
 .nav-center {
   display: flex;
   align-items: center;
@@ -66,13 +75,15 @@ nav {
   border-radius: 26.8px;
   border: none;
   margin-bottom: 20px;
+  box-shadow: 1px 1px 4px #e1000093;
+  border: 1px solid black;
 }
 .arrow-down {
   padding-left: 10px;
 }
 .sign-up-drop-down {
   height: 0rem;
-  transform: translateY(-100);
+  /* transform: translateY(-100); */
   overflow: hidden;
   transition: var(--transition);
 }
@@ -91,7 +102,7 @@ nav {
   height: 20rem;
 }
 .hamburger .fa-bars {
-  font-size: 2rem;
+  font-size: 1.1rem;
 }
 .hamburger {
   transition: var(--transition);
@@ -102,6 +113,86 @@ nav {
 }
 .nav-item {
   margin-bottom: 45.69px;
+}
+.red-design {
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  /* left: 0;
+  right: 0; */
+  bottom: 0;
+  transform: rotate(90deg);
+  z-index: -10;
+}
+header {
+  height: 100vh;
+  background-image: url(../assets/FD\ BG-dust.png);
+}
+.headerOne {
+  font-size: var(--h1fontMobile);
+  margin-top: 110px;
+}
+.headerOne,
+.headerTwo {
+  text-align: center;
+}
+.hero-description {
+  display: none;
+}
+.hero-btn {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 63px;
+  width: 209.47500610351562px;
+}
+/* .btn img {
+  box-shadow: 1px 1px 4px #e1000093;
+} */
+
+.ctaText {
+  position: absolute;
+  color: var(--clr-white);
+}
+.hero-poster {
+  display: flex;
+  justify-content: center;
+}
+.poster-container {
+  width: 370px;
+  height: 300px;
+}
+
+.custom-shape-divider-bottom-1648453308 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1648453308 svg {
+  position: relative;
+  display: block;
+  width: calc(139% + 1.3px);
+  height: 130px;
+}
+
+.custom-shape-divider-bottom-1648453308 .shape-fill {
+  fill: var(--bg-blue);
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-bottom-1648453308 svg {
+    width: calc(139% + 1.3px);
+    height: 141px;
+  }
 }
 @keyframes message {
   from {
@@ -146,21 +237,71 @@ nav {
     align-items: center;
     justify-content: space-between;
     height: 80px;
+    position: sticky;
+    top: 80px;
   }
   .nav-item {
     margin-right: 74px;
   }
-
+  .sign-up {
+    position: relative;
+  }
   .sign-up-drop-down {
-    height: auto;
-    display: none;
+    /* height: 0; */
+    position: absolute;
+    /* display: none; */
     /* transform: translateY(50%); */
     overflow: hidden;
     transition: var(--transition);
   }
+  .sign-link {
+    background-color: rgba(255, 255, 255, 0.5);
+    filter: blur(2);
+    text-align: center;
+    width: 10rem;
+  }
+  .sign-link:last-child {
+    border-top: 1px solid var(--red);
+  }
   .sign-up,
   .nav-item {
     margin-bottom: 0px;
+  }
+  .headerOne {
+    font-size: var(--h1fontDesktop);
+    margin-top: 163px;
+  }
+  .headerOne,
+  .headerTwo {
+    text-align: left;
+  }
+  .hero-description {
+    display: none;
+  }
+  .hero-btn {
+    display: flex;
+    justify-content: left;
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 63px;
+    width: 209.47500610351562px;
+  }
+  .hero-poster {
+    display: block;
+    justify-content: center;
+  }
+  .poster-container {
+    width: fit-content;
+    height: fit-content;
+  }
+  .custom-shape-divider-bottom-1648453308 svg {
+    position: relative;
+    display: block;
+    width: calc(139% + 1.3px);
+    height: 150px;
   }
 }
 
