@@ -117,15 +117,9 @@ nav {
 }
 /* hero style */
 .red-design {
-  position: absolute;
-  /* height: 50px; */
-  /* width: 100vw; */
-  /* left: 0;
-  right: 0; */
   background-image: url(../assets/FD\ Art.png);
   bottom: 0;
-  /* transform: rotate(90deg); */
-  z-index: -10;
+  z-index: 28;
 }
 header {
   height: 100vh;
@@ -201,8 +195,9 @@ header {
 /* exchange style */
 .exchange {
   position: absolute;
+  width: 100%;
   bottom: 0;
-  z-index: 20;
+  z-index: 100;
 }
 .coin-form-btn {
   display: flex;
