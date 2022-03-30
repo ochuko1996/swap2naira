@@ -9,9 +9,14 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- font-awesome link -->
     <link rel="stylesheet" href="https://use.fontawesome.com/2554255ec4.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/Group 5.png" type="image/x-icon">
 </head>
 <body>
-    <header>
+    <header class="relative">
+        <div class="red-design ">
+        </div>
+        <div class="red-design-mobile"></div>
         <!-- message-alert -->
         <div class="message-container">
             <div class="message-alert d-flex">
@@ -25,7 +30,7 @@
 
         </div>
         <!-- nav-bar -->
-        <div class="shadow-1">
+        <div class="shadow-1 bg-white">
             <nav class="container">
                 <div class="nav-header">
                     <div class="nav-center ">
@@ -80,12 +85,12 @@
                                     </span>
                                 </button>
                                 <div class="sign-up-drop-down">
-                                    <div class="sign-link mb-4">
+                                    <div class="sign-link p-1 ">
                                         <a href="#">
                                             Log In
                                         </a>
                                     </div>
-                                    <div class="sign-link mb-4">
+                                    <div class="sign-link p-1">
                                         <a href="#">
                                             Sign Up
                                         </a>
@@ -102,127 +107,170 @@
 
         </div>
         <!-- hero-section -->
-        <!-- <section class="hero">
-            <div class="row">
-                <div class=" hero-text col-12 col-lg-6">
-                    <h1 class="headerOne">
-                        Convert your Crypto to Naira.
-                    </h1>
-                    <h3>    
-                        Easy. Simple. Fast
-                    </h3>
-                    <p class="hero-description">
-                        No  more slow crypto excahnge transaction!! Get instant exchange at the best rate possible.
-                    </p>
-                    <div class="hero-btn">
-                        <div class="btn">
+        <div class="container">
+            <section class="hero">
+                <div class="row">
+                    <div class=" hero-text col-12 col-lg-6">
+                        <h1 class="headerOne">
+                            Convert your Crypto to Naira.
+                        </h1>
+                        <h3 class="headerTwo">    
+                            Easy. Simple. Fast
+                        </h3>
+                        <p class="hero-description">
+                            No  more slow crypto excahnge transaction!! Get instant exchange at the best rate possible.
+                        </p>
+                        <div class="hero-btn">
+                            <a href="#sale-point">
 
+                                <div class="btn relative">
+                                    <span class="ctaText">
+                                        Sell Crypto
+                                    </span>
+                                    <img class="img-fluid" src="./assets/FD button.png" alt="btn">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="hero-coin-icons">
+                            
                         </div>
                     </div>
-                    <div class="hero-coin-icons">
-                        
+                    <div class="hero-poster col-12 col-lg-6">
+                        <div class="poster-container">
+                            <img class="img-fluid" src="./assets/FD Girl.png" alt="girl">
+                        </div>
                     </div>
                 </div>
-                <div class="hero-poster col-12 col-lg-6">
-                    <div class="poster-container">
-                        <img src="" alt="">
-                    </div>
-                </div>
-            </div>
-        </section> -->
+            </section>
+
+        </div>
+         <div class="custom-shape-divider-bottom-1648453308">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
     </header>
     <!-- Exchange-Section -->
-    <section>
-        <!-- <div class="crypto-text">
-            <h3>
-                Crypto Exchange
-            </h3>
-            <p>
-                No  more slow crypto excahnge transaction!! Get instant exchange at the best rate possible.
-            </p>
+    <section class="height-100 bg-blue relative">
+        <div class="exchange"><img class="img-fluid" src="./assets/Mask group.png" alt=""></div>
+        <div class="container">
+            <div class="row">
+                
+                <div id="sale-point" class="crypto-text col-12 col-lg-8 ">
+                    <h3>
+                        Crypto Exchange
+                    </h3>
+                    <p>
+                        No  more slow crypto excahnge transaction!! Get instant exchange at the best rate possible.
+                    </p>
+                </div>
+                <form action="" method="get">
+                    
+                    <div class="progress-bar-container col-12 col-lg-8">
+                        <div class="progress-bar-outer">
+                            <div class="progress-bar-inner"></div>
+                        </div>
+                    </div>
+                    <!-- coin exchange point -->
+                    <div class="coin-exchange-container col-12 col-lg-8">
+                        <div class="input-container ">
+                            <select class="w-100 select" name="coin" id="coin">
+                                <option value="select-coin">
+                                    <span> 
+                                        <i class="fa fa-copyright " aria-hidden="true">    
+                                    </i>
+                                    &copy;
+                                    </span> Select Coin
+                                </option>
+                                <option value="Btc">
+                                    Bitcoin
+                                </option>
+                                <option value="Eth">
+                                    Etherium
+                                </option>
+                            </select>
+                        </div>
+                        <div class="input-container">
+                            <select class="w-100 select" name="bank" id="bank">
+                                <option value="select-bank">
+                                    <span class="bank-icon">
+                                        <i class="far fa-home"></i>
+                                    </span>
+                                    Select Bank
+                                </option>
+                                <option value="first-bank">
+                                    First Bank
+                                </option>
+                                <option value="access">
+                                    Access Bank
+            
+                                </option>
+                            </select>
+                        </div>
+                        <div class="input-container">
+                            <input class="w-100" type="text" name="account-number" id="accountNnumber" placeholder="Enter Account Number">
+                        </div>
+                        <div class="coin-form-btn">
+
+                            <button type="submit"class="btn relative">
+                                <span class="ctaText">
+                                    Sell Crypto
+                                </span>
+                                <img class="img-fluid" src="./assets/FD button.png" alt="btn">
+                            <button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="process-bar">
-            <div class="process-bar-outer">
-                <div class="process-bar-inner"></div>
-            </div>
-        </div> -->
-        <!-- coin exchange point -->
-        <!-- <div class="coin-exchange-container">
-            <div class="input-container">
-                <select name="coin" id="coin">
-                    <option value="select-coin">
-                        <span>icon</span> Select Coin
-                    </option>
-                    <option value="">
-
-                    </option>
-                    <option value="">
-
-                    </option>
-                </select>
-            </div>
-            <div class="input-container">
-                <select name="bank" id="bank">
-                    <option value="select-bank">
-                        <span class="bank-icon">
-                            icon
-                        </span>
-                        Select Bank
-                    </option>
-                    <option value="">
-
-                    </option>
-                    <option value="">
-
-                    </option>
-                </select>
-            </div>
-            <div class="input-container">
-                <input type="text" name="account-number" id="account-number" placeholder="Enter Account Number">
-            </div>
-            <div class="coin-form-btn">
-                <input type="submit" value="Select-Crypto">
-            </div>
-        </div> -->
     </section>
     <!-- four steps -->
-    <!-- <section>
-        <div class="col-12 col-lg-6">
-            <h5>It's simple!</h5>
-            <h3>Get your cash with just 4 steps.</h3>
+    <section>
+        
+        <div class="col-12 col-lg-4 p-2">
+            <h4 class="fourStepsHeader">It's simple!</h4>
+            <h2>Get your cash with just 4 steps.</h2>
             <div class="four-steps-container">
-                <div class="steps">
-                    <span class="step-icon"></span>
+                <div class="steps d-flex ">
+                    <span class="step-icon mx-2">
+                        <img src="./assets/Group 20.png" alt="">
+                    </span>
                     <h6>
                         Get your cash with just 4 steps.
                     </h6>
                 </div>
-                <div class="steps">
-                    <span class="step-icon"></span>
+                <div class="steps d-flex ">
+                    <span class="step-icon mx-2">
+                        <img src="./assets/Group 20.png" alt="">
+                    </span>
                     <h6>
                         Provide your Naira bank account
                     </h6>
                 </div>
-                <div class="steps">
-                    <span class="step-icon"></span>
+                <div class="steps d-flex ">
+                    <span class="step-icon mx-2">
+                        <img src="./assets/Group 20.png" alt="">
+                    </span>
                     <h6>
                         Send crypto to displayed address
                     </h6>
                 </div>
-                <div class="steps">
-                    <span class="step-icon"></span>
+                <div class="steps d-flex ">
+                    <span class="step-icon mx-2">
+                        <img src="./assets/Group 20.png" alt="">
+                    </span>
                     <h6>
                         Get Naira in 15 minutes
                     </h6>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-lg-8">
             <div class="four-step-poster">
-                <img src="" alt="">
+                <img src="./assets/" alt="">
             </div>
         </div>
-    </section> -->
+    </section>
     <!-- dashboard-sign-in-section -->
     <!-- <section>
         <div class="row">
@@ -303,6 +351,6 @@
     
 
     
-    <script src="./js/app.js"></script>
+    <script type="module" src="./js/app.js"></script>
 </body>
 </html>
