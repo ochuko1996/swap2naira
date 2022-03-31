@@ -42,7 +42,8 @@
   width: 80vw;
   /* border: 1px solid black; */
 }
-.brand-desktop {
+.brand-desktop,
+.hero-coin-icons {
   display: none;
 }
 nav {
@@ -118,8 +119,23 @@ nav {
 /* hero style */
 .red-design {
   background-image: url(../assets/FD\ Art.png);
+  background-size: cover;
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -100;
+  display: none;
+}
+.red-design-mobile {
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 25%;
   bottom: 0;
-  z-index: 28;
+  z-index: -100;
+  background: url(../assets/9.png);
 }
 header {
   height: 100vh;
@@ -189,15 +205,25 @@ header {
 .height-100 {
   height: 100vh;
 }
+.height-80 {
+  height: 80vh;
+}
+.height-120 {
+  height: 120vh;
+  background-image: url(../assets/FD\ BG-dust.png);
+}
 .bg-blue {
   background-color: var(--bg-blue);
 }
+
 /* exchange style */
 .exchange {
   position: absolute;
   width: 100%;
   bottom: 0;
-  z-index: 100;
+  z-index: -1;
+  top: 0;
+  /* background-image: url(../assets/Mask\ group.png); */
 }
 .coin-form-btn {
   display: flex;
@@ -210,7 +236,7 @@ header {
 .crypto-text {
   text-align: center;
   color: var(--clr-white);
-  margin-top: 8;
+  margin-top: 80px;
 }
 .progress-bar-container {
   margin-top: 54.94px;
@@ -250,11 +276,63 @@ header {
 }
 /* exchange style ends here */
 /* four steps */
-
+button {
+  outline: none;
+  border: none;
+}
+select,
+input::placeholder {
+  padding: 10px;
+}
+input,
+select {
+  padding: 10px;
+}
 .steps {
   align-items: center !important;
   /* padding: 5px; */
 }
+/* dashboard-sign-in-section */
+.dashboard-blurb {
+  justify-content: center;
+}
+.dashboard-credit-left {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 346px;
+}
+.blurb {
+  background-color: var(--clr-white);
+  height: 170.71495056152344px;
+  /* width: 168.4906463623047px; */
+  left: 29px;
+  border-radius: 16.036479949951172px;
+  padding: 0 10px;
+}
+.blurb-icon {
+  margin-top: 33px;
+}
+.blurb-icon ~ h3 {
+  margin-top: 8.39px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+}
+.blurb-icon ~ h3 ~ p {
+  margin-top: 11px;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 13px;
+  letter-spacing: 0em;
+}
+.mr-36 {
+  margin-right: 20.2px;
+}
+.mt-36 {
+  margin-top: 39.29px;
+}
+/* dashboard-sign-in-section ends */
 /* frames */
 @keyframes message {
   from {
@@ -284,11 +362,14 @@ header {
     display: flex;
   }
   .hamburger,
-  .brand-mobile {
+  .brand-mobile,
+  .red-design-mobile {
     display: none;
   }
   .nav-links,
-  .brand-desktop {
+  .brand-desktop,
+  .red-design,
+  .hero-coin-icons {
     display: flex;
   }
   .nav-center {
@@ -337,7 +418,7 @@ header {
   }
   .headerOne {
     font-size: var(--h1fontDesktop);
-    margin-top: 163px;
+    margin-top: 140px;
   }
   .headerOne,
   .headerTwo {
@@ -393,6 +474,31 @@ header {
   .btn {
     border: none;
     background-color: none;
+  }
+  .blurb {
+    height: 307px;
+    width: 303px;
+    left: 593px;
+    /* top: 3308px; */
+    border-radius: 28.83871078491211px;
+    padding: 55px, 40px, 55px, 40px;
+    background-color: var(--clr-white);
+    padding: 0 10px;
+  }
+  .blurb-icon {
+    margin-top: 60px;
+  }
+  .blurb-icon ~ h3 {
+    margin-top: 15px;
+  }
+  .blurb-icon ~ h3 ~ p {
+    margin-top: 11px;
+  }
+  .mr-36 {
+    margin-right: 36px;
+  }
+  .mt-36 {
+    margin-top: 36px;
   }
 }
 

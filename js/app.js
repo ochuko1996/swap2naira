@@ -14,14 +14,16 @@ harmburger.forEach(btn=>{
         }
     })
 })
+
 // select and progress bar js
 const progressBar = document.querySelector('.progress-bar-inner')
 const select = document.querySelectorAll('.select')
 const coin = document.getElementById('coin')
 const bank = document.getElementById('bank')
-let accountNumber = document.getElementById('accountNnumber').value
+let accountNumber = document.getElementById('accountNnumber')
 
-coin.addEventListener("click",()=>{
+
+coin.addEventListener("change",()=>{
     if(coin.selectedIndex > 0){
         progressBarWidth += 30
         progressBar.style.width = progressBarWidth + "%"
@@ -33,7 +35,7 @@ coin.addEventListener("click",()=>{
     }
 })
 
-bank.addEventListener("click",()=>{
+bank.addEventListener("change",()=>{
     if(bank.selectedIndex > 0){
         progressBarWidth += 30
         progressBar.style.width = progressBarWidth + "%"
@@ -43,18 +45,20 @@ bank.addEventListener("click",()=>{
         progressBar.style.width = progressBarWidth
     }
 })
-const accountNo = account
-function accountFunc(){
-    if(accountNo.accountNo === accountNumber){
-        // progressBarWidth += 30
-        // progressBar.style.width = progressBarWidth + "%"
-        // progressBar.style.transition = "1s"
-        console.log('it is correct');
-    }
-    else{
-        progressBar.style.width = progressBarWidth
-        console.log('it is not correct');
-    }
 
-}
-
+let input;
+// accountNumber.addEventListener('input', e =>{
+//      input = e.target.value
+//      console.log(input);
+// })
+// function search(nameKey, myArray){
+//     for (let i = 0; i < account.length; i++) {
+//         let accountDigit = account[i].accountNo;
+//         if(myArray[i].accountNo === nameKey){
+//             return myArray[i]
+//         }
+//     }
+//     // let result = search(input,account)
+//     // console.log(search(nameKey, myArray));
+// }
+// search(input,account)
