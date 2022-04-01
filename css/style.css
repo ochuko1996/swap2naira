@@ -10,6 +10,7 @@
   --h1-color-grad: #222222;
   --h1-color-grad-2: #303030;
   --red: #e10000;
+
   --gray: #f2f2f2;
   --clr-white: #fff;
   /* shadow */
@@ -21,6 +22,7 @@
   --h1fontDesktop: 61px;
   --bg-blue: #15172c;
   --bg-yellow: #ff9c00;
+  --light-red: #fff1f1;
 }
 .relative {
   position: relative;
@@ -209,8 +211,10 @@ header {
   height: 80vh;
 }
 .height-120 {
-  height: 120vh;
+  /* height: 120vh; */
   background-image: url(../assets/FD\ BG-dust.png);
+  background-size: cover;
+  background-position: center;
 }
 .bg-blue {
   background-color: var(--bg-blue);
@@ -300,15 +304,19 @@ select {
   display: flex;
   justify-content: center;
   align-self: center;
+  /* width: 346px; */
+}
+.dashboard-credit-left img {
   width: 346px;
 }
+
 .blurb {
   background-color: var(--clr-white);
   height: 170.71495056152344px;
   /* width: 168.4906463623047px; */
   left: 29px;
   border-radius: 16.036479949951172px;
-  padding: 0 10px;
+  padding: 0 32.25px;
 }
 .blurb-icon {
   margin-top: 33px;
@@ -331,6 +339,18 @@ select {
 }
 .mt-36 {
   margin-top: 39.29px;
+}
+.dashboard-sign-in{
+  margin-top: 119px;
+}
+.dashboard-sign-in-section {
+  background-color: var(--bg-blue);
+  border-radius: 30px;
+  padding: 50px;
+  color: var(--clr-white);
+}
+.sign-in-btn{
+  margin-top: 45px
 }
 /* dashboard-sign-in-section ends */
 /* frames */
@@ -475,30 +495,69 @@ select {
     border: none;
     background-color: none;
   }
+  .dashboard-blurb {
+    justify-content: start;
+  }
+  .dashboard-credit-left {
+    display: block;
+    /* justify-content: center;
+    align-self: center; */
+    /* width: 346px; */
+  }
+  .dashboard-credit-left img {
+    width: auto;
+  }
+
   .blurb {
     height: 307px;
-    width: 303px;
     left: 593px;
-    /* top: 3308px; */
     border-radius: 28.83871078491211px;
-    padding: 55px, 40px, 55px, 40px;
     background-color: var(--clr-white);
-    padding: 0 10px;
+    padding: 0 40px;
   }
   .blurb-icon {
     margin-top: 60px;
   }
   .blurb-icon ~ h3 {
     margin-top: 15px;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: 0em;
   }
   .blurb-icon ~ h3 ~ p {
     margin-top: 11px;
+    font-size: auto;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
   }
   .mr-36 {
     margin-right: 36px;
   }
   .mt-36 {
     margin-top: 36px;
+  }
+  .blurb:hover {
+    background-color: var(--bg-blue);
+    color: white;
+    transition: var(--transition);
+  }
+  .blurb:hover .fill-icon {
+    fill: var(--light-red);
+  }
+  /* .frame-work {
+    margin-bottom: 237px;
+  } */
+  .dashboard-sign-in-section {
+    padding: 100px;
+  }
+  .sign-in-btn{
+    justify-content: center;
+    margin-top: 0;
+  }
+  .dashboard-sign-in{
+    margin-top: 177px;
   }
 }
 
