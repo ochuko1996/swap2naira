@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- font-awesome link -->
     <link rel="stylesheet" href="https://use.fontawesome.com/2554255ec4.css">
+    <script src="https://kit.fontawesome.com/a9d721abf5.js" crossorigin="anonymous"></script>
     <!-- favicon -->
     <link rel="shortcut icon" href="./assets/Group 5.png" type="image/x-icon">
 </head>
@@ -32,78 +33,85 @@
         <!-- message-alert ends-->
         <!-- nav-bar -->
         <div class="shadow-1 bg-white">
-            <nav class="container">
-                <div class="nav-header">
-                    <div class="nav-center ">
-                        <div class="nav-brand ">
-                            <span class="brand-mobile"> 
-                                <img src="./assets/Group 5.png" alt="brand-mobile">
-                            </span>
-                            <span class="brand-desktop">
-                                <img src="./assets/Logo.png" alt="brand-desktop">
-                            </span>
+            <nav class="nav-main-container  bg-white">
+                <nav class="container">
+                    <div class="nav-header">
+                        <div class="nav-center ">
+                            <div class="nav-brand ">
+                                <div class="brand-mobile">
+                                    <a href="index.html">
+                                        <img src="./assets/Group 5.png" alt="brand-mobile">
+                                    </a>
+                                </div>
+                                <span class="brand-desktop">
+                                    <a href="index.html">
+                                        <img src="./assets/Logo.png" alt="brand-desktop">
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="hamburger nav-toggle">
+                                <i class="fa fa-bars"></i>
+                            </div>
                         </div>
-                        <div class="hamburger nav-toggle">
-                            <i class="fa fa-bars"></i>
-                        </div>
-                    </div>
-                    <div class="nav-links">
-                        <div class="nav-item">
-                            <a href="#">
-                            <span class="nav-icon">
-                                <img src="./assets/Vector.png" alt="">
-                            </span>
-                            telegram
-                        </a>
-                        </div>
-                        <div class="nav-item">
-                            <a href="#">    
-                            <span class="nav-icon">
-                                <img src="/assets/twemoji_shuffle-tracks-button.png" alt="Vector-1">
-                            </span>
-                            
-                                Track transactions
+                        <div class="nav-links">
+                            <div class="nav-item">
+                                <a href="#">
+                                <span class="nav-icon">
+                                    <img src="./assets/Vector.png" alt="">
+                                </span>
+                                telegram
                             </a>
-                        </div>
-                        <div class="nav-item">
-                            <a href="#">
-                            <span class="nav-icon">
-                                <img src="./assets/Vector-2.png" alt="">
-                            </span>
-                            calculate
-                        </a>
-                        </div>
-                        <div class="account-drop">
-                            <div class="sign-up-btn">
-                                <button class="nav-toggle sign-up">
-                                    <span class="nav-icon">
-                                        <img src="./assets/Vector-3.png" alt="account">
-                                    </span>
-                                    Account
-                                    <span class="arrow-down">
-                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
-
-                                    </span>
-                                </button>
-                                <div class="sign-up-drop-down">
-                                    <div class="sign-link p-1 ">
-                                        <a href="#">
-                                            Log In
-                                        </a>
-                                    </div>
-                                    <div class="sign-link p-1">
-                                        <a href="#">
-                                            Sign Up
-                                        </a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#">    
+                                <span class="nav-icon">
+                                    <img src="/assets/twemoji_shuffle-tracks-button.png" alt="Vector-1">
+                                </span>
+                                
+                                    Track transactions
+                                </a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#">
+                                <span class="nav-icon">
+                                    <img src="./assets/Vector-2.png" alt="">
+                                </span>
+                                calculate
+                            </a>
+                            </div>
+                            <div class="account-drop">
+                                <div class="sign-up-btn ">
+                                    <button class="nav-toggle sign-up ">
+                                        <span class="nav-icon">
+                                            <img src="./assets/Vector-3.png" alt="account">
+                                        </span>
+                                        Account
+                                        <span class="arrow-down">
+                                            <i class="fa fa-sort-desc" aria-hidden="true"></i>
+    
+                                        </span>
+                                    </button>
+                                    <div class="sign-up-drop-down">
+                                        <div class="sign-link p-1 ">
+                                            <a href="#">
+                                                Log In
+                                            </a>
+                                        </div>
+                                        <div class="sign-link p-1">
+                                            <a href="#">
+                                                Sign Up
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                        </div>
     
-
+                            </div>
+        
+    
+                        </div>
                     </div>
-                </div>
+                </nav>
+
             </nav>
 
         </div>
@@ -154,14 +162,20 @@
         <!-- hero-section ends -->
     </header>
     <!-- Exchange-Section -->
-    <section class="height-100 bg-blue relative">
+    <section id="sale-point" class="height-100 bg-blue relative">
         <div class="exchange">
             <img class="img-fluid" src="./assets/Mask group.png" alt="">
+        </div>
+        <div class="eth-dynamic-premium">
+            <img src="./assets/eth-dynamic-premium 1.png" alt="">
+        </div>
+        <div class="eth-dynamic-premium-2 ">
+            <img src="./assets/eth-dynamic-premium 2.png" alt="">
         </div>
         <div class="container">
             <div class="row">
                 
-                <div id="sale-point" class="crypto-text col-12 col-lg-8 ">
+                <div  class="crypto-text col-12 col-lg-8 ">
                     <h3>
                         Crypto Exchange
                     </h3>
@@ -183,11 +197,7 @@
                             <div class="input-container ">
                                 <select class="w-100 select" name="coin" id="coin">
                                     <option value="select-coin">
-                                        <span> 
-                                            <i class="fa fa-copyright " aria-hidden="true">    
-                                        </i>
-                                        &copy;
-                                        </span> Select Coin
+                                        Select Coin
                                     </option>
                                     <option value="Btc">
                                         Bitcoin
@@ -236,9 +246,7 @@
     <!-- four steps -->
     <section class="height-80">
         <div class="container">
-            
-            <div class="row">
-    
+            <div class="row ">
                 <div class="col-12 col-lg-4 ">
                     <h4 class="fourStepsHeader">It's simple!</h4>
                     <h2>Get your cash with just 4 steps.</h2>
@@ -277,9 +285,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-8">
+                <div class="col-12 four-step-right col-lg-8">
                     <div class="four-step-poster">
-                        <img src="./assets/" alt="">
+                        <img  src="./assets/guy.png" alt="">
                     </div>
                 </div>
             </div>
@@ -288,15 +296,22 @@
     </section>
     <!-- four steps ends -->
     <!-- dashboard-sign-in-section -->
-    <section class="height-120">
+     <section class="height-120 relative">
         <div class="frame-work">
-            
+            <img src="./assets/Group 19.png" alt="">
         </div>
+        <img src="./assets/Mask group (1).png" alt="" class="design-right">
+        <div class="dashLeftDesign">
+            <img src="./assets/Mask group@2x.png" alt="" class="design-left">
+
+        </div>
+        
         <div class="container dashboard-main">
             
             <div class="row ">
                 <div class="col-12 col-lg-4">
                     <div class="dashboard-credit-left ">
+
                         <img class="img-fluid" src="./assets/Group 3588.png" alt="" >
                     </div>
                 </div>
@@ -405,48 +420,279 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> 
     <!-- dashboard-sign-in-section ends-->
     <!-- team-section -->
-    <!-- <section>
-
-    </section> -->
-    <!-- team-section -->
-    <!-- traders section -->
-    <!-- <section>
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <div class="trader-poster">
-                    <img src="" alt="">
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
+    <section class="height-80">
+        <div class="container">
+            <div class="row team-section">
                 <h2>
-                    Join over 500+ Traders Using swap2naira
+                    Don’t just take our word for it  
                 </h2>
-                <div class="trader-btn">
+                <p>
+                    See what people are saying about our services
+                </p>
+            </div>
+            <div class="team-profile">
+                <div class="team-profile-slider d-flex">
+                    <div class="first-slider d-flex">
+                        
+                        <div class="team-slider  ">
+                            <div class="profile-image-container">
+                                <div class="profile-image bordered">
+                                    <img src="" alt="profile-image">
+                                </div>
+    
+                            </div>
+                            <div class="profile-bio">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus optio velit quas est ad reiciendis expedita iste sunt quisquam!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="team-slider  ">
+                            <div class="profile-image-container">
+                                <div class="profile-image bordered">
+                                    <img src="" alt="profile-image">
+                                </div>
+    
+                            </div>
+                            <div class="profile-bio">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus optio velit quas est ad reiciendis expedita iste sunt quisquam!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="team-slider  ">
+                            <div class="profile-image-container">
+                                <div class="profile-image bordered">
+                                    <img src="" alt="profile-image">
+                                </div>
+        
+                            </div>
+                            <div class="profile-bio">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus optio velit quas est ad reiciendis expedita iste sunt quisquam!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="first-slider d-flex">
+                        
+                        <div class="team-slider  ">
+                            <div class="profile-image-container">
+                                <div class="profile-image bordered">
+                                    <img src="" alt="profile-image">
+                                </div>
+    
+                            </div>
+                            <div class="profile-bio">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus optio velit quas est ad reiciendis expedita iste sunt quisquam!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="team-slider  ">
+                            <div class="profile-image-container">
+                                <div class="profile-image bordered">
+                                    <img src="" alt="profile-image">
+                                </div>
+    
+                            </div>
+                            <div class="profile-bio">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus optio velit quas est ad reiciendis expedita iste sunt quisquam!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="team-slider  ">
+                            <div class="profile-image-container">
+                                <div class="profile-image bordered">
+                                    <img src="" alt="profile-image">
+                                </div>
+        
+                            </div>
+                            <div class="profile-bio">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus optio velit quas est ad reiciendis expedita iste sunt quisquam!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+    <!-- team-section ends -->
 
+    <!-- traders section -->
+    <section class="height-100 relative trader-bg">
+        <div class="frame-work">
+            <img src="./assets/Group 25.png" alt="">
+        </div>
+        <div class="frame-work-bottom">
+            <img src="./assets/Group 25.png" alt="">
+        </div>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-12 col-lg-6 row trade-cont">
+                    <div class="trader-poster">
+                        <img class="img-fluid" src="./assets/guy2.png" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <h1 class="trader-text">
+                        Join over 500+ Traders Using swap2naira
+                    </h1>
+                    <div class="trader-btn">
+                        <a href="#sale-point">
+
+                            <div class="btn relative">
+                                <span class="ctaText">
+                                    Sell Crypto
+                                </span>
+                                <img class="img-fluid" src="./assets/Rectangle 11.png" alt="btn">
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
     <!-- footer-section -->
-    <!-- <section>
-        <div class="footer-cta-container">
-            <h3>
-                Don’t wait, start now!
-            </h3>
-            <p>
-                97% of first time users come back to use our services
-            </p>
-            <div class="footer-cta">
+    <footer>
+        <div class="container-fluid footer-cta-bg">
+            <div class="row">
+                <div class="footer-cta-container">
+                    <h3>
+                        Don’t wait, start now!
+                    </h3>
+                    <p>
+                        97% of first time users come back to use our services
+                    </p>
+                    <div class="footer-cta">
+                        <a href="#sale-point">
+        
+                            <div class="btn relative">
+                                <span class="ctaText">
+                                    Sell Crypto
+                                </span>
+                                <img class="img-fluid" src="./assets/FD button.png" alt="btn">
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
             </div>
         </div>
-        <footer>
+        <footer class="bg-blue footer-main">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-12 col-lg-3">
+                        <a href="#">
 
+                            <div class="footer-icon">
+                                <a href="./index.html">
+                                    <img src="./assets/Group 5 (1).png" alt="Logo">
+                                </a>
+                            </div>
+                        </a>
+                        <p>
+                            <a href="tel:+2349045998959">
+                                +234-90459-98959
+                            </a>
+                        </p>
+                        <p>
+                            <a href="mailto:support@swap2naira.ng">
+                                support@swap2naira.ng
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <h6>
+                            <a href="#">
+                                Quick Links
+                            </a>    
+                        </h6>
+                        <p class="lighter-font">
+                            <a href="#">Calculate</a>
+                        </p>
+                        <p class="lighter-font">
+                            <a href="#">Information</a>
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <p></p>
+                        <p class="lighter-font">
+                            <a href="#">
+                                Company
+                            </a>
+                        </p>
+                        <p class="lighter-font">
+                            <a href="#">
+                                About
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <h3>
+                            Subscribe
+                        </h3>
+                        <form action="" >
+                            <div class="footer-input-container relative">
+
+                                <input 
+                                type="email" 
+                                name="email" 
+                                id="email" 
+                                placeholder="Get product updates">
+                                <button 
+                                class="subscribe-btn" 
+                                type="submit">                                &#8594;
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <hr class="hr">
+                    <div class="col-12 col-lg-4">
+                        <span class="social-icon">
+                            <a href="#">
+                                <img src="./assets/Linkedin.png" alt="">
+                            </a>
+                        </span>
+                        <span class="social-icon">
+                             <a href="#">
+                                <img src="./assets/facebook.png" alt="">
+                            </a>
+                        </span>
+                        <span class="social-icon">
+                             <a href="#">
+                                <img src="./assets/Twitter.png" alt="">
+                            </a>
+                        </span>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <p class="footer-product">
+                            A product of 
+                            <span class="footer-brand mx-2">
+                                <img class="img-fluid" src="./assets/Group 5 (1).png" alt="">
+                            </span>
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <p class="lighter-font text-white">&copy; 2022 Swap2naira. All rights reserved</p>
+                    </div>
+                </div>
+            </div>
         </footer>
-    </section> -->
+    </footer>
     
     
 

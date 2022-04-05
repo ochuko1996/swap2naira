@@ -15,36 +15,59 @@ harmburger.forEach(btn=>{
     })
 })
 
-// select and progress bar js
+
 const progressBar = document.querySelector('.progress-bar-inner')
 const select = document.querySelectorAll('.select')
 const coin = document.getElementById('coin')
 const bank = document.getElementById('bank')
 let accountNumber = document.getElementById('accountNnumber')
+let formSelectedState = {
+    coin: false,
+    accountNumber: false,
+    bank: false
+}
 
 
-coin.addEventListener("change",()=>{
-    if(coin.selectedIndex > 0){
-        progressBarWidth += 30
-        progressBar.style.width = progressBarWidth + "%"
-        progressBar.style.transition = "1s"
-        console.log(progressBarWidth);
-    }
-    else{
-        progressBar.style.width = progressBarWidth
-    }
-})
+coin.addEventListener("change", progressBarChange)
+bank.addEventListener("change", progressBarChange)
 
-bank.addEventListener("change",()=>{
-    if(bank.selectedIndex > 0){
-        progressBarWidth += 30
+function progressBarChange (e) {
+    if(e.target.selectedIndex >= 0){
+        updateProgressBar(e)
+        
         progressBar.style.width = progressBarWidth + "%"
         progressBar.style.transition = "1s"
     }
     else{
         progressBar.style.width = progressBarWidth
     }
-})
+}
+
+function normalizeProgressBar (e, selectInput) {
+    if (e.target.value === selectInput) {
+        formSelectedState.coin = false
+        progressBarWidth -= 30
+    }
+}
+
+function updateProgressBar (e) {
+    let element = e.target.id
+    if (element === "coin")  {
+        if (!formSelectedState.coin) {
+            formSelectedState.coin = true
+            progressBarWidth += 30
+        }
+        
+        normalizeProgressBar(e, "select-coin")
+    } else if (element === "bank")  {
+        if (!formSelectedState.bank) {
+            formSelectedState.bank = true
+            progressBarWidth += 30
+        }
+        
+        normalizeProgressBar(e, "select-bank")
+    }
+}
 
 let input;
 // accountNumber.addEventListener('input', e =>{
