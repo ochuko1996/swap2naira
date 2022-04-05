@@ -2,6 +2,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* outline: 1px solid black; */
+}
+body{
+  overflow-x: hidden;
 }
 
 /* root */
@@ -10,7 +14,9 @@
   --h1-color-grad: #222222;
   --h1-color-grad-2: #303030;
   --red: #e10000;
+
   --gray: #f2f2f2;
+  --gray-2: #e5e5e5;
   --clr-white: #fff;
   /* shadow */
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -21,6 +27,7 @@
   --h1fontDesktop: 61px;
   --bg-blue: #15172c;
   --bg-yellow: #ff9c00;
+  --light-red: #fff1f1;
 }
 .relative {
   position: relative;
@@ -36,13 +43,15 @@
   width: 200vw;
   justify-content: space-between;
   overflow: auto;
+  
 }
 .scroll {
   animation: message 10s linear infinite;
-  width: 80vw;
+  width: 80%;
   /* border: 1px solid black; */
 }
-.brand-desktop {
+.brand-desktop,
+.hero-coin-icons {
   display: none;
 }
 nav {
@@ -55,9 +64,19 @@ nav {
   border: 1px solid black;
 }
 .nav-main-container {
-  position: fixed;
+  background-color: var(--clr-white);
   width: 100vw;
-  z-index: 1;
+}
+.nav-header{
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  /* padding: 0 1rem 0 0; */
+  background-color: var(--clr-white);
+  margin: 0;
+  left: 0;
+  right: 0;
+  box-shadow: var(--light-shadow);
 }
 .nav-center {
   display: flex;
@@ -69,6 +88,16 @@ nav {
   height: 0rem;
   overflow: hidden;
   transition: var(--transition);
+  padding: 0 1rem;
+  /* border: 1px solid black; */
+}
+.brand-mobile{
+  width: 40px !important;
+  height: 40px !important;
+}
+.brand-mobile img{
+  width: 100% !important;
+  height: 100% !important;
 }
 .sign-up {
   height: 51px;
@@ -76,7 +105,7 @@ nav {
   border-radius: 26.8px;
   border: none;
   margin-bottom: 20px;
-  box-shadow: 1px 1px 4px #e1000093;
+  box-shadow: 0px 0px 4px 1px #e100005b;
   /* border: 1px solid black; */
 }
 .arrow-down {
@@ -126,16 +155,31 @@ nav {
 /* hero style */
 .red-design {
   background-image: url(../assets/FD\ Art.png);
+  background-size: cover;
+  position: absolute;
+  width: 27%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -100;
+  display: none;
+}
+.red-design-mobile {
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 25%;
   bottom: 0;
-  z-index: 28;
+  z-index: -100;
+  background: url(../assets/9.png);
 }
 header {
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(../assets/FD\ BG-dust.png);
 }
 .headerOne {
   font-size: var(--h1fontMobile);
-  margin-top: 110px;
+  margin-top: 150px;
 }
 .headerOne,
 .headerTwo {
@@ -195,17 +239,33 @@ header {
 }
 /* hero style Ends here */
 .height-100 {
-  height: 100vh;
+  min-height: 100vh;
 }
+.height-80 {
+  min-height: 80vh; 
+  /* border: 2px solid red; */
+}
+.height-120 {
+  /* height: 120vh; */
+  background-image: url(../assets/FD\ BG-dust.png);
+  background-size: cover;
+  background-position: center;
+  padding: 20px 0;
+  /* margin-top: calc(); */
+}
+
 .bg-blue {
   background-color: var(--bg-blue);
 }
+
 /* exchange style */
 .exchange {
   position: absolute;
   width: 100%;
   bottom: 0;
-  z-index: 100;
+  z-index: -1;
+  top: 0;
+  /* background-image: url(../assets/Mask\ group.png); */
 }
 .coin-form-btn {
   display: flex;
@@ -218,7 +278,7 @@ header {
 .crypto-text {
   text-align: center;
   color: var(--clr-white);
-  margin-top: 8;
+  margin-top: 80px;
 }
 .progress-bar-container {
   margin-top: 54.94px;
@@ -241,6 +301,9 @@ header {
   border-radius: 10px;
   margin-bottom: 18px;
 }
+.four-step-right{
+  padding: 0;
+}
 .fourStepsHeader {
   color: var(--red);
   margin-top: 69px;
@@ -248,6 +311,16 @@ header {
   font-style: normal;
   font-weight: 600;
   line-height: 44px;
+}
+.four-step-poster{
+  margin-top: 20px;
+  width: 100%;
+  height: 500px;
+  /* border: 1px solid ; */
+}
+.four-step-poster img{
+  width: 100%;
+  height: 100%;
 }
 .fourStepsHeader ~ h2 {
   font-size: 34px;
@@ -258,11 +331,205 @@ header {
 }
 /* exchange style ends here */
 /* four steps */
-
+button {
+  outline: none;
+  border: none;
+}
+select,
+input::placeholder {
+  padding: 10px;
+}
+input,
+select {
+  padding: 10px;
+}
 .steps {
   align-items: center !important;
   /* padding: 5px; */
 }
+/* dashboard-sign-in-section */
+.frame-work{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+.frame-work img{
+  width: 100%;
+}
+
+.design-right{
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  top: 0;
+  display: none;
+}
+.dashLeftDesign{
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 30%;
+  z-index: -1;
+  width:200px;
+}
+.eth-dynamic-premium,
+.eth-dynamic-premium-2{
+  display: none;
+}
+.design-left{
+  width: 100%;
+}
+.dashboard-blurb {
+  justify-content: center;
+}
+.dashboard-credit-left {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  /* width: 346px; */
+}
+.dashboard-credit-left img {
+  width: 346px;
+}
+
+.blurb {
+  background-color: var(--clr-white);
+  height: 170.71495056152344px;
+  border-radius: 16.036479949951172px;
+  padding: 0 32.25px;
+}
+.blurb-icon {
+  margin-top: 33px;
+}
+.blurb-icon ~ h3 {
+  margin-top: 8.39px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+}
+.blurb-icon ~ h3 ~ p {
+  margin-top: 11px;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 13px;
+  letter-spacing: 0em;
+}
+.mr-36 {
+  margin-right: 20.2px;
+}
+.mt-36 {
+  margin-top: 39.29px;
+}
+.dashboard-sign-in{
+  margin-top: 119px;
+}
+.dashboard-sign-in-section {
+  background-color: var(--bg-blue);
+  border-radius: 30px;
+  padding:50px;
+  color: var(--clr-white);
+  /* margin-bottom: 199px; */
+}
+.sign-in-btn{
+  margin-top: 45px
+}
+/* dashboard-sign-in-section ends */
+/* team-section */
+.team-section{
+  text-align: center;
+  margin-top: 70px;
+}
+.team-profile{
+  margin-top: 143px;
+}
+.team-profile-slider{
+  width: 200vw;
+  justify-content: space-between;
+  overflow-x: auto;
+}
+.team-profile-slider{
+  /* width: 0; */
+  overflow: hidden;
+  
+}
+.team-slider{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 40%;
+  padding: 10px;
+  box-shadow: 1px 1px 8px #ccc6c6ce;
+  margin-right: 20px;
+  font-size: 9px;
+  
+}
+.team-profile-slider{
+  animation: flow 20s linear infinite;
+  padding: 20px;  
+
+}
+.team-profile-slider:hover{
+  animation-play-state: paused;
+}
+.profile-image-container{
+  width: 30%;
+  /* margin-right: 50px; */
+}
+
+.profile-image{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #15172c;
+ }
+
+@keyframes flow {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* team-section ends */
+/* trader-section */
+.trader-bg{
+  background: url(../assets/FD\ BG-dust.png) var(--bg-yellow);
+}
+.trader-text{
+  margin-top: 60px;
+  font-size: var(--h1fontMobile);
+  font-weight: 600;
+  line-height: 51px;
+  letter-spacing: 0em;
+  text-align: center;
+   /* width: calc(100% - 200px); */
+
+}
+.trader-bg .frame-work, .frame-work-bottom{
+  display: none;
+}
+.trader-btn{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.trader-btn  .ctaText{
+  color: var(--red);
+}
+.trade-cont{
+  display: flex;
+  justify-content: center;
+}
+.trader-poster{
+  width: 80%;
+  margin-top: 40px;
+
+}
+/* trader-section ends */
 /* frames */
 @keyframes message {
   from {
@@ -273,7 +540,73 @@ header {
   }
 }
 /* frames ends here */
+/* footer-section */
+.footer-cta-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 92px 0;
+}
+.footer-cta-bg{
+  background-color: var(--gray-2);
+}
+.subBtn{
+  background-color: #000;
+}
+.footer-main{
+  padding: 119px 0;
 
+}
+.lighter-font{
+  font-weight: 100;
+}
+.footer-main a, .footer-main h3{
+  text-decoration: none;
+  color: var(--clr-white);
+}
+#email{
+  height: 48.59825134277344px;
+  width: 248px;
+  border-radius: 6px;
+  border: none;
+}
+.footer-input-container{
+  width: fit-content;
+}
+#email ~ button{
+  height: 48.59825134277344px;
+  width: 50px;
+  border-radius: 0  6px 6px 0;
+  background-color: var(--red);
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  color: var(--clr-white);
+  font-size: 2rem;
+
+}
+.hr{
+  border: 1px solid var(--clr-white);
+  margin: 67.9px 0 32px;
+}
+
+.social-icon{
+  margin-right: 10px;
+}
+.footer-icon{
+  margin-bottom: 29.9px;
+}
+.footer-product{
+  color: var(--clr-white);
+  display: flex;
+  align-items: center;
+}
+.footer-brand{
+  width: 30px;
+}
+/* footer-section ends */
 /** For mobile devices **/
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
@@ -284,19 +617,42 @@ header {
   .hero-poster {
     margin-top: 60px;
   }
+  .trader-poster{
+    width: 60%;
+  }
+  .trader-text{
+    margin-top: 40px;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .message-container {
+  .height-80{
+    height: 80vh;
+  }
+  /* .message-container {
     display: flex;
+  } */
+  .height-120 {
+    margin-top: 0;
+    padding: 199px 0;
   }
   .hamburger,
-  .brand-mobile {
+  .brand-mobile,
+  .red-design-mobile {
     display: none;
   }
   .nav-links,
-  .brand-desktop {
+  .brand-desktop,
+  .red-design,
+  .hero-coin-icons,
+  .frame-work,
+  .design-right,
+  .dashLeftDesign, 
+  .eth-dynamic-premium,
+  .eth-dynamic-premium-2,
+  .trader-bg .frame-work, 
+  .frame-work-bottom {
     display: flex;
   }
   .nav-center {
@@ -305,7 +661,14 @@ header {
   .nav-links {
     height: fit-content;
     align-items: center;
+    padding: 5px;
+    /* position: static; */
     /* height: inherit; */
+  }
+  .sticky{
+    position: sticky;
+    top: 0px;
+
   }
   .nav-header {
     display: flex;
@@ -313,8 +676,10 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 80px;
+    position: -webkit-sticky;
     position: sticky;
-    top: 80px;
+    top: 0px;
+    box-shadow: none;
   }
   .nav-item {
     margin-right: 74px;
@@ -345,7 +710,7 @@ header {
   }
   .headerOne {
     font-size: var(--h1fontDesktop);
-    margin-top: 163px;
+    margin-top: 140px;
   }
   .headerOne,
   .headerTwo {
@@ -366,12 +731,17 @@ header {
     width: 209.47500610351562px;
   }
   .hero-poster {
-    display: block;
+    display: flex;
     justify-content: center;
   }
   .poster-container {
     width: fit-content;
-    height: fit-content;
+    height: 80%;
+    /* border: 1px solid black; */
+    margin-top: 70px;
+  }
+  .poster-container img{
+    height: 100%;
   }
   .custom-shape-divider-bottom-1648453308 svg {
     position: relative;
@@ -395,13 +765,134 @@ header {
     margin-top: 30px;
     justify-content: start;
   }
-  .hero-poster {
+  /* .hero-poster {
     margin-top: 150px;
-  }
+    border: 1px solid black;
+  } */
   .btn {
     border: none;
     background-color: none;
   }
+  .dashboard-blurb {
+    justify-content: start;
+  }
+  .dashboard-credit-left {
+    display: block;
+    /* justify-content: center;
+    align-self: center; */
+    /* width: 346px; */
+  }
+  .dashboard-credit-left img {
+    width: auto;
+  }
+
+  .blurb {
+    height: 307px;
+    left: 593px;
+    border-radius: 28.83871078491211px;
+    background-color: var(--clr-white);
+    padding: 0 40px;
+  }
+  .blurb-icon {
+    margin-top: 60px;
+  }
+  .blurb-icon ~ h3 {
+    margin-top: 15px;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: 0em;
+  }
+  .blurb-icon ~ h3 ~ p {
+    margin-top: 11px;
+    font-size: auto;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .mr-36 {
+    margin-right: 36px;
+  }
+  .mt-36 {
+    margin-top: 36px;
+  }
+  .blurb:hover {
+    background-color: var(--bg-blue);
+    color: white;
+    transition: var(--transition);
+  }
+  .blurb:hover .fill-icon {
+    fill: var(--light-red);
+  }
+ .eth-dynamic-premium,.frame-work-bottom{
+   position: absolute;
+   
+ }
+ .frame-work-bottom{
+   bottom: 0;
+   width: 100vw;
+ }
+ .frame-work-bottom img{
+   width: 100%;
+ }
+ .eth-dynamic-premium-2{
+   position: absolute;
+   bottom: 170px;
+   right: 200px;
+
+ }
+  .dashboard-sign-in-section {
+    padding: 100px;
+  }
+  .sign-in-btn{
+    justify-content: center;
+    margin-top: 0;
+  }
+  .dashboard-sign-in{
+    margin-top: 177px;
+  }
+  .trader-text{
+    margin-top: 176px;
+    font-size: var(--h1fontDesktop);
+    font-weight: 800;
+    line-height: 81px;
+    letter-spacing: 0em;
+    text-align: left;
+     width: calc(100% - 200px);
+  
+  }
+  .trader-btn{
+    justify-content: left !important;
+  }
+  .four-step-right{
+    padding: auto;
+  }
+  .trader-poster{
+    width: 80%;
+    margin-top: 100px;
+  }
+  .four-step-poster{
+    height: 79.8%;
+    width: fit-content;
+    /* margin-top: 50px; */
+  }
+  .four-step-poster img{
+    width: auto;
+    /* border: 1px solid black; */
+    /* height: in; */
+  }
+  .team-slider{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+  }
+  .profile-image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #15172c;
+   }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */

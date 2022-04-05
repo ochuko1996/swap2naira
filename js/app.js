@@ -14,47 +14,74 @@ harmburger.forEach(btn=>{
         }
     })
 })
-// select and progress bar js
+
+
 const progressBar = document.querySelector('.progress-bar-inner')
 const select = document.querySelectorAll('.select')
 const coin = document.getElementById('coin')
 const bank = document.getElementById('bank')
-let accountNumber = document.getElementById('accountNnumber').value
-
-coin.addEventListener("click",()=>{
-    if(coin.selectedIndex > 0){
-        progressBarWidth += 30
-        progressBar.style.width = progressBarWidth + "%"
-        progressBar.style.transition = "1s"
-        console.log(progressBarWidth);
-    }
-    else{
-        progressBar.style.width = progressBarWidth
-    }
-})
-
-bank.addEventListener("click",()=>{
-    if(bank.selectedIndex > 0){
-        progressBarWidth += 30
-        progressBar.style.width = progressBarWidth + "%"
-        progressBar.style.transition = "1s"
-    }
-    else{
-        progressBar.style.width = progressBarWidth
-    }
-})
-const accountNo = account
-function accountFunc(){
-    if(accountNo.accountNo === accountNumber){
-        // progressBarWidth += 30
-        // progressBar.style.width = progressBarWidth + "%"
-        // progressBar.style.transition = "1s"
-        console.log('it is correct');
-    }
-    else{
-        progressBar.style.width = progressBarWidth
-        console.log('it is not correct');
-    }
-
+let accountNumber = document.getElementById('accountNnumber')
+let formSelectedState = {
+    coin: false,
+    accountNumber: false,
+    bank: false
 }
 
+
+coin.addEventListener("change", progressBarChange)
+bank.addEventListener("change", progressBarChange)
+
+function progressBarChange (e) {
+    if(e.target.selectedIndex >= 0){
+        updateProgressBar(e)
+        
+        progressBar.style.width = progressBarWidth + "%"
+        progressBar.style.transition = "1s"
+    }
+    else{
+        progressBar.style.width = progressBarWidth
+    }
+}
+
+function normalizeProgressBar (e, selectInput) {
+    if (e.target.value === selectInput) {
+        formSelectedState.coin = false
+        progressBarWidth -= 30
+    }
+}
+
+function updateProgressBar (e) {
+    let element = e.target.id
+    if (element === "coin")  {
+        if (!formSelectedState.coin) {
+            formSelectedState.coin = true
+            progressBarWidth += 30
+        }
+        
+        normalizeProgressBar(e, "select-coin")
+    } else if (element === "bank")  {
+        if (!formSelectedState.bank) {
+            formSelectedState.bank = true
+            progressBarWidth += 30
+        }
+        
+        normalizeProgressBar(e, "select-bank")
+    }
+}
+
+let input;
+// accountNumber.addEventListener('input', e =>{
+//      input = e.target.value
+//      console.log(input);
+// })
+// function search(nameKey, myArray){
+//     for (let i = 0; i < account.length; i++) {
+//         let accountDigit = account[i].accountNo;
+//         if(myArray[i].accountNo === nameKey){
+//             return myArray[i]
+//         }
+//     }
+//     // let result = search(input,account)
+//     // console.log(search(nameKey, myArray));
+// }
+// search(input,account)
