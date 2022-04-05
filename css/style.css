@@ -131,7 +131,15 @@ nav {
 .show-signup {
   height: 20rem;
 }
+.brand-mobile {
+  width: 20px;
+}
+.brand-mobile img {
+  width: 100%;
+}
+
 .hamburger .fa-bars {
+ exchange-section
   font-size: 1.1rem;
 }
 .hamburger {
