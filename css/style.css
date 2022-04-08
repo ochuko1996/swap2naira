@@ -29,6 +29,36 @@ body{
   --bg-yellow: #ff9c00;
   --light-red: #fff1f1;
 }
+		.alertbox{
+			width: 300px;
+			padding: 10px;
+			margin: 15px;
+			height: auto;
+			position: absolute;
+			right: 0;
+			top: 15;
+			z-index: 2;
+		}
+
+		.alert{
+			padding: 10px 50px;
+			margin-top: 5px;
+		}
+
+		.alert-danger{
+			background-color: #f00;
+			color: #fff;
+		}
+
+		.alert-warning{
+			background-color: rgb(223, 135, 4);
+			color: #fff;
+		}
+
+		.alert-success{
+			background-color: rgb(8, 168, 8);
+			color: #fff;
+		}
 .relative {
   position: relative;
 }
@@ -259,6 +289,9 @@ header {
   top: 0;
   /* background-image: url(../assets/Mask\ group.png); */
 }
+#sale-point{
+  padding-bottom: 100px;
+}
 .coin-form-btn {
   display: flex;
   justify-content: center;
@@ -435,6 +468,7 @@ select {
 }
 .team-profile{
   margin-top: 143px;
+  overflow: hidden;
 }
 .team-profile-slider{
   width: 200vw;

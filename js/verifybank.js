@@ -32,9 +32,9 @@ function verifyBank(bankCode, accountNumber){
 		accname.textContent = verifydetail.accountname;
         accnamevalue.value = verifydetail.accountname;
         email.value = "ogologyprince@gmail.com";
-        emailBox.style.display = "block";
-        phone.value="09045998959";
-        phoneBox.style.display = "block";
+        // emailBox.style.display = "block";
+        // phone.value="09045998959";
+        // phoneBox.style.display = "block";
         loading.style.display = "none";
 		success.style.display = "block";
 

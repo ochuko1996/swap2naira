@@ -17,10 +17,9 @@ harmburger.forEach(btn=>{
 
 
 const progressBar = document.querySelector('.progress-bar-inner')
-const select = document.querySelectorAll('.select')
-const coin = document.getElementById('coin')
-const bank = document.getElementById('bank')
-let accountNumber = document.getElementById('accountNnumber')
+const coin = document.getElementById('coinType')
+const bank = document.getElementById('bankName')
+let accountNumber = document.getElementById('accnum')
 let formSelectedState = {
     coin: false,
     accountNumber: false,
@@ -69,19 +68,3 @@ function updateProgressBar (e) {
     }
 }
 
-let input;
-// accountNumber.addEventListener('input', e =>{
-//      input = e.target.value
-//      console.log(input);
-// })
-// function search(nameKey, myArray){
-//     for (let i = 0; i < account.length; i++) {
-//         let accountDigit = account[i].accountNo;
-//         if(myArray[i].accountNo === nameKey){
-//             return myArray[i]
-//         }
-//     }
-//     // let result = search(input,account)
-//     // console.log(search(nameKey, myArray));
-// }
-// search(input,account)

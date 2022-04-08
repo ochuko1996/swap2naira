@@ -21,12 +21,12 @@
 		let optV = "";
 
 		coinType.addEventListener("change", ()=>{
-			bankBox.style.display = "block";
+			// bankBox.style.display = "block";
 			accNum.value = "";
 			success.style.display = "none";
 			accname.textContent = "";
 			bankName.value = "-Select Bank-";
-			accountBox.style.display = "none";
+			// accountBox.style.display = "none";
 
 		})
 		
@@ -37,7 +37,7 @@
 				accname.textContent = "";
 				accountBox.style.display = "none";
 			}else{
-				accountBox.style.display = "block";
+				// accountBox.style.display = "block";
 				accNum.value = "";
 				success.style.display = "none";
 				accname.textContent = "";
