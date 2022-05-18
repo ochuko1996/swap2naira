@@ -26,6 +26,7 @@ function verifyBank(bankCode, accountNumber){
             getAlert("Invalid Account Details", "danger");
         }else{
              return bank_result.data;
+             console.log(bank_result.data)
         }
     })
     .then(verifydetail => { 

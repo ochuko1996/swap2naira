@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" class="loading"  data-textdirection="ltr">
+<!-- <html lang="en" class="loading"  data-textdirection="ltr"> -->
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,12 @@
     <!-- font-awesome link -->
     <link rel="stylesheet" href="https://use.fontawesome.com/2554255ec4.css">
     <script src="https://kit.fontawesome.com/a9d721abf5.js" crossorigin="anonymous"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- favicon -->
     <link rel="shortcut icon" href="./assets/Group 5.png" type="image/x-icon">
 </head>
@@ -36,9 +43,9 @@
         <!-- message-alert ends-->
         <!-- nav-bar -->
         <div class="shadow-1 bg-white">
-            <nav class="nav-main-container  bg-white">
-                <nav class="container">
-                    <div class="nav-header">
+            <nav class="nav-main-container  glass" id="nav-main-container">
+                <nav class="container relative ">
+                    <div class="nav-header ">
                         <div class="nav-center ">
                             <div class="nav-brand ">
                                 <div class="brand-mobile">
@@ -193,7 +200,6 @@
                             <div class="progress-bar-inner"></div>
                         </div>
                     </div>
-                    <!-- coin exchange point -->
                     <div class="coin-exchange-container col-12 col-lg-8">
                         <form id="form" action="">
 
@@ -202,12 +208,7 @@
                                     <option value="select-coin">
                                         Select Coin
                                     </option>
-                                    <!-- <option value="Btc">
-                                        Bitcoin
-                                    </option>
-                                    <option value="Eth">
-                                        Etherium
-                                    </option> -->
+                                    
                                 </select>
                             </div>
                             <div class="input-container">
@@ -222,7 +223,6 @@
                                 </select>
                             </div>
                             <div class="input-container relative">
-                                <!-- <input class="w-100" type="text" name="account-number" id="accnum" placeholder="Enter Account Number"> -->
                                 <input type="text" id="accnum" class="w-100" placeholder="Enter Account Number" name="accnum">
 											<input type="hidden" id="accnamevalue" name="accnamevalue">
 											<div class="form-control-position">
@@ -252,7 +252,7 @@
     <section class="height-80">
         <div class="container">
             <div class="row ">
-                <div class="col-12 col-lg-4 ">
+                <div class="col-12 col-lg-6 ">
                     <h4 class="fourStepsHeader">It's simple!</h4>
                     <h2>Get your cash with just 4 steps.</h2>
                     <div class="four-steps-container">
@@ -290,7 +290,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 four-step-right col-lg-8">
+                <div class="col-12 four-step-right col-lg-6">
                     <div class="four-step-poster">
                         <img  src="./assets/guy.png" alt="">
                     </div>
@@ -301,20 +301,19 @@
     </section>
     <!-- four steps ends -->
     <!-- dashboard-sign-in-section -->
-     <section class="height-120 relative">
+     <section class="height-120 relative dashboard">
         <div class="frame-work">
             <img src="./assets/Group 19.png" alt="">
         </div>
         <img src="./assets/Mask group (1).png" alt="" class="design-right">
         <div class="dashLeftDesign">
             <img src="./assets/Mask group@2x.png" alt="" class="design-left">
-
         </div>
         
         <div class="container dashboard-main">
             
             <div class="row ">
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-lg-4 dashboard-credit">
                     <div class="dashboard-credit-left ">
 
                         <img class="img-fluid" src="./assets/Group 3588.png" alt="" >
@@ -440,90 +439,11 @@
             </div>
             <div class="team-profile">
                 <div class="team-profile-slider d-flex">
-                    <div class="first-slider d-flex">
+                    <div class="first-slider d-flex p-3">
                         
-                        <div class="team-slider  ">
-                            <div class="profile-image-container">
-                                <div class="profile-image bordered">
-                                    <img src="" alt="profile-image">
-                                </div>
-    
-                            </div>
-                            <div class="profile-bio">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus optio velit quas est ad reiciendis expedita iste sunt quisquam!
-                                </p>
-                            </div>
-                        </div>
-                        <div class="team-slider  ">
-                            <div class="profile-image-container">
-                                <div class="profile-image bordered">
-                                    <img src="" alt="profile-image">
-                                </div>
-    
-                            </div>
-                            <div class="profile-bio">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus optio velit quas est ad reiciendis expedita iste sunt quisquam!
-                                </p>
-                            </div>
-                        </div>
-                        <div class="team-slider  ">
-                            <div class="profile-image-container">
-                                <div class="profile-image bordered">
-                                    <img src="" alt="profile-image">
-                                </div>
-        
-                            </div>
-                            <div class="profile-bio">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus optio velit quas est ad reiciendis expedita iste sunt quisquam!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="first-slider d-flex">
                         
-                        <div class="team-slider  ">
-                            <div class="profile-image-container">
-                                <div class="profile-image bordered">
-                                    <img src="" alt="profile-image">
-                                </div>
-    
-                            </div>
-                            <div class="profile-bio">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus optio velit quas est ad reiciendis expedita iste sunt quisquam!
-                                </p>
-                            </div>
-                        </div>
-                        <div class="team-slider  ">
-                            <div class="profile-image-container">
-                                <div class="profile-image bordered">
-                                    <img src="" alt="profile-image">
-                                </div>
-    
-                            </div>
-                            <div class="profile-bio">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus optio velit quas est ad reiciendis expedita iste sunt quisquam!
-                                </p>
-                            </div>
-                        </div>
-                        <div class="team-slider  ">
-                            <div class="profile-image-container">
-                                <div class="profile-image bordered">
-                                    <img src="" alt="profile-image">
-                                </div>
-        
-                            </div>
-                            <div class="profile-bio">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus optio velit quas est ad reiciendis expedita iste sunt quisquam!
-                                </p>
-                            </div>
-                        </div>
                     </div>
+                    
                 </div>
                 </div>
                 </div>
@@ -547,7 +467,7 @@
             <div class="row">
                 <div class="col-12 col-lg-6 row trade-cont">
                     <div class="trader-poster">
-                        <img class="img-fluid" src="./assets/guy2.png" alt="">
+                        <img src="./assets/guy2.png" alt="">
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
@@ -595,30 +515,30 @@
 
             </div>
         </div>
-        <footer class="bg-blue footer-main">
+        <footer class=" footer-main">
             <div class="container">
                 <div class="row ">
                     <div class="col-12 col-lg-3">
-                        <a href="#">
-
+                        <a href="./index.html">
                             <div class="footer-icon">
-                                <a href="./index.html">
                                     <img src="./assets/Group 5 (1).png" alt="Logo">
-                                </a>
                             </div>
                         </a>
-                        <p>
-                            <a href="tel:+2349045998959">
-                                +234-90459-98959
-                            </a>
-                        </p>
-                        <p>
-                            <a href="mailto:support@swap2naira.ng">
-                                support@swap2naira.ng
-                            </a>
-                        </p>
+                        <div class="mail-contact">
+                            <p>
+                                <a href="tel:+2349045998959">
+                                    +234-90459-98959
+                                </a>
+                            </p>
+                            <p>
+                                <a href="mailto:support@swap2naira.ng">
+                                    support@swap2naira.ng
+                                </a>
+                            </p>
+
+                        </div>
                     </div>
-                    <div class="col-12 col-lg-3">
+                    <div class="col-6 col-lg-3">
                         <h6>
                             <a href="#">
                                 Quick Links
@@ -631,7 +551,7 @@
                             <a href="#">Information</a>
                         </p>
                     </div>
-                    <div class="col-12 col-lg-3">
+                    <div class="col-6 col-lg-3">
                         <p></p>
                         <p class="lighter-font">
                             <a href="#">
@@ -645,7 +565,7 @@
                         </p>
                     </div>
                     <div class="col-12 col-lg-3">
-                        <h3>
+                        <h3 class="Subscribe-text">
                             Subscribe
                         </h3>
                         <form action="" >
@@ -667,6 +587,19 @@
                 <div class="row">
                     <hr class="hr">
                     <div class="col-12 col-lg-4">
+                        <div class="mail-contact-2">
+                            <p>
+                                <a href="tel:+2349045998959">
+                                    +234-90459-98959
+                                </a>
+                            </p>
+                            <p>
+                                <a href="mailto:support@swap2naira.ng">
+                                    support@swap2naira.ng
+                                </a>
+                            </p>
+
+                        </div>
                         <span class="social-icon">
                             <a href="#">
                                 <img src="./assets/Linkedin.png" alt="">
@@ -682,6 +615,7 @@
                                 <img src="./assets/Twitter.png" alt="">
                             </a>
                         </span>
+                        
                     </div>
                     <div class="col-12 col-lg-4">
                         <p class="footer-product">
@@ -693,8 +627,7 @@
                     </div>
                     <div class="col-12 col-lg-4">
                         <small>
-
-                            <p class="lighter-font text-white">&copy; 2022 Swap2naira. All rights reserved</p>
+                            <p class="lighter-font text-white text-center text-lg-right reserved">&copy; 2022 Swap2naira. All rights reserved</p>
                         </small>
                     </div>
                 </div>
@@ -709,6 +642,6 @@
     <script src="./js/getcoin.js"></script>
     <script src="./js/getbank.js"></script>
     <script src="./js/verifybank.js"></script>
-    <!-- <script src="./side-alert.js"></script> -->
+    <script src="./js/team-slider.js"></script>
 </body>
 </html>

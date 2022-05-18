@@ -14,6 +14,68 @@ harmburger.forEach(btn=>{
         }
     })
 })
+const navCont = document.getElementById('nav-main-container')
+window.onscroll = function(){scrollEffect()}
+function scrollEffect() {
+   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        navCont.classList.add('nav-shadow')
+    }else{
+        navCont.classList.remove('nav-shadow') 
+    }
+}
+// var requestOptions = {
+//     method: 'GET',
+//     redirect: 'follow'
+//   };
+  
+//   fetch("https://merchant.birrionapi.com/api/get-banks", requestOptions)
+//     .then(response => response.text())
+//     .then(result => JSON.parse(result))
+//     .then(bankinfo => bankinfo.data)
+//     .then(banklist => {
+//             coin.addEventListener("change", progressBarChange)
+//             bank.addEventListener("change", progressBarChange)
+//             console.log(banklist.length);
+//             function progressBarChange (e) {
+//                 if(e.target.selectedIndex >= 0){
+//                     updateProgressBar(e)
+//                     // console.log('hi');
+                    
+//                     progressBar.style.width = progressBarWidth + "%"
+//                     progressBar.style.transition = "1s"
+//                 }
+//                 else{
+//                     progressBar.style.width = progressBarWidth
+//                 }
+//             }
+
+//             function normalizeProgressBar (e, selectInput) {
+//                 if (e.target.value === selectInput) {
+//                     formSelectedState.coin = false
+//                     progressBarWidth -= 30
+//                 }
+//             }
+
+//             function updateProgressBar (e) {
+//                 let element = e.target.id
+//                 if (element === "coin")  {
+//                     if (!formSelectedState.coin) {
+//                         formSelectedState.coin = true
+//                         progressBarWidth += 30
+//                     }
+                    
+//                     normalizeProgressBar(e, "select-coin")
+//                 } else if (element === "bank")  {
+//                     if (!formSelectedState.bank) {
+//                         formSelectedState.bank = true
+//                         progressBarWidth += 30
+//                     }
+                    
+//                     normalizeProgressBar(e, "select-bank")
+//                 }
+//             }
+            
+//     })
 
 
 const progressBar = document.querySelector('.progress-bar-inner')
@@ -27,44 +89,48 @@ let formSelectedState = {
 }
 
 
+
+
 coin.addEventListener("change", progressBarChange)
 bank.addEventListener("change", progressBarChange)
 
-function progressBarChange (e) {
-    if(e.target.selectedIndex >= 0){
-        updateProgressBar(e)
-        
-        progressBar.style.width = progressBarWidth + "%"
-        progressBar.style.transition = "1s"
-    }
-    else{
-        progressBar.style.width = progressBarWidth
-    }
-}
+            function progressBarChange (e) {
+                if(e.target.selectedIndex >= 0){
+                    updateProgressBar(e)
+                    console.log("i'm more  than 0");
+                    progressBar.style.width = progressBarWidth + "%"
+                    progressBar.style.transition = "1s"
+                }
+                else{
+                    progressBar.style.width = progressBarWidth
+                    console.log('mtcheww');
+                }
+            }
 
-function normalizeProgressBar (e, selectInput) {
-    if (e.target.value === selectInput) {
-        formSelectedState.coin = false
-        progressBarWidth -= 30
-    }
-}
+            function normalizeProgressBar (e, selectInput) {
+                if (e.target.value === selectInput) {
+                    formSelectedState.coin = false
+                    progressBarWidth -= 30
+                }
+            }
 
-function updateProgressBar (e) {
-    let element = e.target.id
-    if (element === "coin")  {
-        if (!formSelectedState.coin) {
-            formSelectedState.coin = true
-            progressBarWidth += 30
-        }
-        
-        normalizeProgressBar(e, "select-coin")
-    } else if (element === "bank")  {
-        if (!formSelectedState.bank) {
-            formSelectedState.bank = true
-            progressBarWidth += 30
-        }
-        
-        normalizeProgressBar(e, "select-bank")
-    }
-}
-
+            function updateProgressBar (e) {
+                let element = e.target.id
+                if (element === "coin")  {
+                    if (!formSelectedState.coin) {
+                        formSelectedState.coin = true
+                        progressBarWidth += 30
+                    }
+                    
+                    normalizeProgressBar(e, "select-coin")
+                } else if (element === "bank")  {
+                    if (!formSelectedState.bank) {
+                        formSelectedState.bank = true
+                        progressBarWidth += 30
+                    }
+                    
+                    normalizeProgressBar(e, "select-bank")
+                }
+            }
+            
+    
