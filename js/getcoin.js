@@ -21,3 +21,12 @@ var requestOptions = {
     })
     .catch(error => console.log('error', error));
 
+
+// async function getCoin(){
+//     const response = await fetch("https://merchant.birrionapi.com/api/get_coins?api_key=",api_key, requestOptions)
+
+//     const res = await response.json()
+
+//     console.log(res); 
+
+// }

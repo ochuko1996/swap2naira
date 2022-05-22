@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* outline: 1px solid black; */
+  /* outline: 1px solid gold; */
 }
 
 
@@ -145,10 +145,10 @@
   height: 51px;
   width: 167.3px;
   border-radius: 26.8px;
-  border: none;
+  background-color: var(--gray);
   margin-bottom: 20px;
-  box-shadow: 0px 0px 4px 1px #e100005b;
-  /* border: 1px solid black; */
+  border: 0.3px solid var(--red);
+  box-shadow: 0px 5.021209716796875px 13.180675506591797px 0px #FFC0003D, 0px 0px 14.017542839050293px 3.8229665756225586px #FFFFFF75 inset;
 }
 .arrow-down {
   padding-left: 10px;
@@ -233,6 +233,7 @@ header {
 .headerTwo {
   text-align: center;
 }
+
 .hero-description {
   display: none;
 }
@@ -263,9 +264,9 @@ header {
 }
 .poster-container {
   position: absolute;
-  bottom: 0;
-  width: 400px;
-  height: 400px;
+  bottom: 20px;
+  width: 350px;
+  height: 350px;
   animation: appear 2s;
 }
 .poster-container img{
@@ -373,6 +374,12 @@ header {
   height: 86px;
   border-radius: 10px;
   margin-bottom: 18px;
+  padding: 0 47px;
+}
+.coinIcon,.bankIcon{
+  position: absolute;
+  top: 30px;
+  left: 20px;
 }
 .four-step-right,.trade-cont{
   padding: 0;
@@ -394,6 +401,12 @@ header {
 .four-step-poster img{
   width: 100%;
   height: 100%;
+}
+.steps:not(:first-child){
+  margin: 18px 0;
+}
+.steps:first-child{
+  margin-top: 18px;
 }
 .fourStepsHeader ~ h2 {
   font-size: 34px;
@@ -892,19 +905,24 @@ select {
   }
   .headerOne {
     font-size: var(--h1fontDesktop);
-    margin-top: 272px;
+    margin-top: 232px;
     line-height:  73.2px;
   }
   .headerOne,
   .headerTwo {
     text-align: left;
   }
+  .headerTwo{
+    margin: 10px 0;
+  }
   .hero-description {
     display: block;
+    width: calc(100% - 100px);
   }
   .hero-btn {
     display: flex;
     justify-content: left;
+    margin-top: 20px;
   }
   .btn {
     display: flex;
@@ -919,12 +937,14 @@ select {
   }
   .poster-container {
     width: fit-content;
-    height: 80%;
+    height: 72%;
     /* border: 1px solid black; */
     margin-top: 70px;
     /* position: static; */
+    bottom: 70px;
   }
   .poster-container img{
+    width: auto;
     height: 100%;
   }
   .custom-shape-divider-bottom-1648453308 svg {
@@ -953,6 +973,9 @@ select {
     margin-top: 150px;
     border: 1px solid black;
   } */
+  .fourStepsHeader{
+    margin-top: 128px;
+  }
   .btn {
     border: none;
     background-color: none;
@@ -974,11 +997,12 @@ select {
   
   
   .blurb {
+    /* height: 0; */
     height: 307px;
     left: 593px;
     border-radius: 28.83871078491211px;
     background-color: var(--clr-white);
-    padding: 0 40px;
+    padding: 0 20px;
   }
   .blurb-icon {
     margin-top: 60px;
@@ -1035,6 +1059,7 @@ select {
   .dashboard-sign-in{
     margin-top: 177px;
   }
+  
   .trader-bg{
     padding: 50px 0 50px;
   }
@@ -1070,10 +1095,11 @@ select {
     height: 100%;
 
   }
+
   .four-step-poster{
-    height: 79.8%;
+    height: 70.8%;
     width: fit-content;
-    /* margin-top: 50px; */
+    margin-top: 70px;
   }
   .four-step-poster img{
     width: auto;
@@ -1097,6 +1123,12 @@ select {
     border-radius: 50%;
     background-color: #15172c;
    }
+   .input-container input, .input-container select{
+     padding: 0 90px;
+   }
+   .bankIcon,.coinIcon{
+     left: 61.25px;
+   }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
@@ -1107,6 +1139,12 @@ select {
   .headerOne {
     width: calc(100% - 100px);
   }
+  .sign-in-text-container h3{
+    width: calc(100% - 200px);
+  }
+  .blurb{
+    padding: 0 40;
+  }
 }
 
 /*  XX-Large devices (larger desktops, 1400px and up) */
@@ -1116,5 +1154,19 @@ select {
   }
   .trader-bg{
     padding: 50px 0 0px;
+  }
+  .headerOne {
+    font-size: var(--h1fontDesktop);
+    margin-top: 232px;
+    line-height:  73.2px;
+  }
+  .headerTwo{
+    margin: 18px 0;
+  }
+  .hero-btn{
+    margin-top: 57px
+  }
+  .hero-description{
+    width: calc(100% - 200px);
   }
 }
